@@ -92,7 +92,7 @@ class WidgetResolver extends GeneratorForAnnotation<FramyWidget> {
   }
 
   String parseDartType(DartType type) {
-    final stringType = type.getDisplayString();
+    final stringType = type.getDisplayString(withNullability: false);
     if (stringType == 'num') {
       return 'double';
     }
