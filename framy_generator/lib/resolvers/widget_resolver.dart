@@ -47,8 +47,8 @@ class WidgetResolver extends GeneratorForAnnotation<FramyWidget> {
         final providerType = providerReader.read('providerType').typeValue;
         framyObject.constructors.first.dependencies.add(
           FramyObjectDependency(
-            providerType.getDisplayString(),
-            providerType.getDisplayString(),
+            providerType.getDisplayString(withNullability: false),
+            providerType.getDisplayString(withNullability: false),
             null,
             false,
             dependencyType: FramyDependencyType.provider,

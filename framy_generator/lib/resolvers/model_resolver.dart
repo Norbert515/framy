@@ -71,7 +71,7 @@ class ModelResolver extends GeneratorForAnnotation<FramyModel> {
   }
 
   String parseDartType(DartType type) {
-    final stringType = type.toString();
+    final stringType = type.getDisplayString(withNullability: false);
     if (stringType == 'num') {
       return 'double';
     }
