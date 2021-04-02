@@ -24,7 +24,7 @@ class PresetResolver extends GeneratorForAnnotation<FramyPreset> {
 
     final execElement = element as ExecutableElement;
     final framyObject = _presetObjectFromElement(element);
-    framyObject.returnType = execElement.returnType.getDisplayString();
+    framyObject.returnType = execElement.returnType.getDisplayString(withNullability: false);
 
     return [framyObject].toJson();
   }
